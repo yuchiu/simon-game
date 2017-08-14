@@ -1,0 +1,79 @@
+.simonBtn {
+    width: 200px;
+    height: 150px;
+    border-bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    transition-duration: 0.2s, 0.5s, 0.2s;
+    transition-property: background, color;
+}
+
+.strictOn{
+    border: 2px solid red;
+}
+
+#startToggle{
+    border: 2px solid #91ffbd;
+    color: white;
+    background: #378944;
+    
+}
+
+
+#green, #green:hover, #green:disabled {
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 0px;
+    background: #34ad32;
+    opacity: 1;
+}
+#red, #red:hover, #red:disabled {
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 0px;
+    background: #c1473a;
+    opacity: 1;
+}
+
+#yellow, #yellow:hover, #yellow:disabled {
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 0px;
+    background: #dbd229;
+    opacity: 1;
+}
+
+#blue, #blue:hover, #blue:disabled {
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 0px;
+    background: #306dc1;
+    opacity: 1;
+}
+
+
+
+#red:active {
+    background: #7f1010;
+}
+
+#green:active {
+    background: #1c6d04;
+}
+
+#yellow:active {
+    background: #ad4b05;
+}
+
+#blue:active {
+    background: #102b7f;
+}
+
+.glowing {
+  animation: glowing 1400ms 300ms;
+}
+
+
+@keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}

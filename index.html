@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <title>Simon Game</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+<body>
+
+    <div class="container ">
+        <div class='row'>
+            <div class='display-4 mx-auto mt-3 text-muted'>Simon Game</div>
+        </div>
+
+        <div class='row'>
+            <div class='lead  mx-auto mt-3'>Count</div>
+        </div>
+        <div class='row'>
+            <div class='display-1 mx-auto' id="counter">0</div>
+        </div>
+        <div class='row justify-content-md-center'>
+            <div class='display-4 mt-4 '>
+                <button type="button" class="btn simonBtn btn-success" id="green"></button>
+            </div>
+            <div class='display-4 mt-4 '>
+                <button type="button" class="btn simonBtn btn-danger" id="red"></button>
+            </div>
+
+        </div>
+        <div class='row justify-content-md-center'>
+
+            <div class='display-4 '>
+                <button type="button" class="btn simonBtn btn-warning" id="yellow"></button>
+            </div>
+            <div class='display-4 '>
+                <button type="button" class="btn simonBtn btn-primary" id="blue"></button>
+            </div>
+        </div>
+        <div class='row'>
+            <h3 class ='display-4 mt-4 mx-auto text-muted'id='message'>
+                Click start to play. Toggle strick mode below.
+            </h3>
+        </div>
+
+        <div class='row justify-content-md-center'>
+            <div class='display-4 mt-4 mx-auto'>
+                <button type="button" class="btn btn-secondary" id="startToggle">Start</button>
+            </div>
+
+            <div class='display-4 mt-4 mx-auto'>
+                <button type="button" class="btn btn-secondary" id="strict">Strict Mode: Off</button>
+            </div>
+        </div>
+        <audio id="startSound" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
+        <audio id="strictSound" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
+        <audio id="simonSound" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
+        <audio id="failSound" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src='app.js'></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
