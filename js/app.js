@@ -6,8 +6,6 @@ let timer;
 this.gameOn = false;
 this.strictMode = false;
 
-deactivateBtn();
-
 function start() {
     message.innerHTML = 'Good luck.'
     gameOn = true;
