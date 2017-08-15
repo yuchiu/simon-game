@@ -1,3 +1,7 @@
+body{
+    background:#e5d6b9;
+}
+
 .simonBtn {
     width: 200px;
     height: 150px;
@@ -11,14 +15,7 @@
 }
 
 .strictOn{
-    border: 2px solid red;
-}
-
-#startToggle{
-    border: 2px solid #91ffbd;
-    color: white;
-    background: #378944;
-    
+    border: 1px solid #e0674c;
 }
 
 
