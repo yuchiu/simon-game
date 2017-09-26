@@ -1,5 +1,6 @@
 # simon-game
-
+view live on this [link](https://yuchiu.github.io/simon-game/)
+![demo](https://github.com/yuchiu/simon-game/blob/master/demo.gif) 
 
 User Story: I am presented with a random series of button presses.
 
@@ -15,4 +16,3 @@ User Story: If I want to restart, I can hit a button to do so, and the game will
 
 User Story: I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses.
 
-![alt text](https://github.com/yuchiu/simon-game/blob/master/599cb1c57ae84367778205.gif) 

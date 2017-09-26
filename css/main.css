@@ -1,5 +1,5 @@
 body{
-    background:#e5d6b9;
+    background:#3c3b42;
 }
 
 .simonBtn {
@@ -46,7 +46,9 @@ body{
     opacity: 1;
 }
 
-
+.text{
+    color: #fffbed;
+}
 
 #red:active {
     background: #7f1010;

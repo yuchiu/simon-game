@@ -7,7 +7,6 @@ this.gameOn = false;
 this.strictMode = false;
 
 function start() {
-    message.innerHTML = 'Good luck.'
     gameOn = true;
     startToggleBtn.innerHTML = 'Restart';
     activateBtn();
@@ -18,7 +17,6 @@ function reset() {
     removeGlow()
     clearTimeout(timer);
     gameOn = false;
-    message.innerHTML = 'Click start to play. Toggle strick mode below.'
     startToggleBtn.innerHTML = 'Start';
     count = 0;
     order = [];
@@ -61,10 +59,8 @@ function userInput(instruct) {
     } else if (order.length === userOrder.length) {
         let bol = checkOrder(userOrder.length - 1);
         if (bol === true) {
-            message.innerHTML = 'Good Job!';
             runSimonGame();
         } else {
-            message.innerHTML = 'wrong step.';
             glow(0, order);
         }
     }
@@ -75,7 +71,6 @@ function checkOrder(index) {
         if (userOrder[index] !== order[index]) {
             userOrder = [];
             playSound(failSound);
-            message.innerHTML = 'wrong step.';
             glow(0, order);
         } else if (userOrder[index] === order[index]) {
             return true;
@@ -84,7 +79,6 @@ function checkOrder(index) {
     } else if (strictMode === true) {
         if (userOrder[index] !== order[index]) {
             playSound(failSound);
-            message.innerHTML = 'game restarted. Good Luck.';
             reset();
             start();
         } else if (userOrder[index] === order[index]) {
