@@ -70,6 +70,7 @@ function checkOrder(index) {
     if (strictMode === false) {
         if (userOrder[index] !== order[index]) {
             userOrder = [];
+            shake();
             playSound(failSound);
             glow(0, order);
         } else if (userOrder[index] === order[index]) {
@@ -81,6 +82,7 @@ function checkOrder(index) {
             playSound(failSound);
             reset();
             start();
+            shake();
         } else if (userOrder[index] === order[index]) {
             return true;
         }

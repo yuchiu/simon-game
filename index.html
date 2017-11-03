@@ -19,7 +19,7 @@
 
     <div class="container ">
         <div class='row'>
-            <div class='display-4 mx-auto mt-4 text'>Simon Game</div>
+            <div class='display-4 mx-auto mt-4 text' id="page-title">SIMON GAME</div>
         </div>
 
         <div class='row'>
@@ -28,32 +28,35 @@
         <div class='row'>
             <div class='display-1 mx-auto text' id="counter">0</div>
         </div>
-        <div class='row justify-content-md-center mt-4'>
-            <div class='display-4 mt-4 '>
-                <button type="button" class="btn simonBtn btn-success" id="green"></button>
-            </div>
-            <div class='display-4 mt-4 '>
-                <button type="button" class="btn simonBtn btn-danger" id="red"></button>
-            </div>
+        <div class="" id="simonPanel">
+            <div class='row justify-content-center mt-4'>
+                <div class='display-4 mt-4 '>
+                    <button type="button" class="btn simonBtn" id="green"></button>
+                </div>
+                <div class='display-4 mt-4 '>
+                    <button type="button" class="btn simonBtn" id="red"></button>
+                </div>
 
+            </div>
+            <div class='row justify-content-center'>
+
+                <div class='display-4 '>
+                    <button type="button" class="btn simonBtn" id="yellow"></button>
+                </div>
+                <div class='display-4 '>
+                    <button type="button" class="btn simonBtn" id="blue"></button>
+                </div>
+            </div>
         </div>
-        <div class='row justify-content-md-center'>
 
-            <div class='display-4 '>
-                <button type="button" class="btn simonBtn btn-warning" id="yellow"></button>
-            </div>
-            <div class='display-4 '>
-                <button type="button" class="btn simonBtn btn-primary" id="blue"></button>
-            </div>
-        </div>
 
-        <div class='row justify-content-md-center mt-4'>
+        <div class='row justify-content-center mt-4'>
             <div class='display-4 mt-4 mx-auto'>
-                <button type="button" class="btn btn-success" id="startToggle">Start</button>
+                <button type="button" class="btn btn-primary toggle-btn" id="startToggle">Start</button>
             </div>
 
             <div class='display-4 mt-4 mx-auto'>
-                <button type="button" class="btn btn-info" id="strict">Strict Mode: Off</button>
+                <button type="button" class="btn btn-danger toggle-btn" id="strictToggle">Strict Mode: Off</button>
             </div>
         </div>
         <audio id="startSound" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>

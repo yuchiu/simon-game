@@ -1,6 +1,6 @@
 # simon-game
 view live on this [link](https://yuchiu.github.io/simon-game/)
-![demo](https://github.com/yuchiu/simon-game/blob/master/demo.gif) 
+![demo](https://github.com/yuchiu/simon-game/blob/master/demo2.gif) 
 
 User Story: I am presented with a random series of button presses.
 

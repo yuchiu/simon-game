@@ -1,3 +1,12 @@
+//animation when error occurs
+function shake(){
+    simonPanel.classList.add('shake');
+    timer = setTimeout(function () {
+        simonPanel.classList.remove('shake');
+    }, 1000);
+}
+
+//animation and glowing effect for button 
 function glow(index, orderArr) {
     deactivateBtn();
     if (index < orderArr.length) {
@@ -13,25 +22,25 @@ function glow(index, orderArr) {
 }
 function whichBtnGlow(btn) {
     if (btn === 1) {
-        greenBtn.classList.add('glowing');
+        greenBtn.classList.add('glowingGreen');
         timer = setTimeout(function () {
             removeGlow();
         }, 1400);
 
     } else if (btn === 2) {
-        redBtn.classList.add('glowing')
+        redBtn.classList.add('glowingRed')
         timer = setTimeout(function () {
             removeGlow();
         }, 1400);
 
     } else if (btn === 3) {
-        yellowBtn.classList.add('glowing')
+        yellowBtn.classList.add('glowingYellow')
         timer = setTimeout(function () {
             removeGlow();
         }, 1400);
 
     } else if (btn === 4) {
-        blueBtn.classList.add('glowing')
+        blueBtn.classList.add('glowingBlue')
         timer = setTimeout(function () {
             removeGlow();
         }, 1400);
@@ -39,10 +48,10 @@ function whichBtnGlow(btn) {
 }
 
 function removeGlow() {
-    greenBtn.classList.remove('glowing');
-    redBtn.classList.remove('glowing')
-    yellowBtn.classList.remove('glowing')
-    blueBtn.classList.remove('glowing')
+    greenBtn.classList.remove('glowingGreen');
+    redBtn.classList.remove('glowingRed')
+    yellowBtn.classList.remove('glowingYellow')
+    blueBtn.classList.remove('glowingBlue')
 }
 
 function playSound(sound) {

@@ -1,53 +1,121 @@
-body{
-    background:#3c3b42;
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|VT323|Orbitron:400,900);
+body {
+    background: #1c1c1c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1c1c1c, #37353d, #1c1c1c);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1c1c1c, #37353d, #1c1c1c);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Orbitron';
+    min-height: 100vh
 }
 
+.strictOn {
+    text-shadow: 0 0 10px #fff7f7, 0 0 20px #fff7f7, 0 0 30px #fff7f7, 0 0 20px #fc4f3f, 0 0 40px #fc4f3f, 0 0 30px #fc4f3f, 0 0 70px #fc4f3f, 0 0 80px #fc4f3f, 0 0 100px #fc4f3f;
+    -webkit-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.text {
+    color: #2095f0;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0 2px #fff7f7;
+}
 .simonBtn {
     width: 200px;
-    height: 150px;
+    height: 200px;
     border-bottom: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    
     transition-duration: 0.2s, 0.5s, 0.2s;
     transition-property: background, color;
-}
-
-.strictOn{
-    border: 1px solid #e0674c;
+    transition: all .1s ease-in-out;
 }
 
 
-#green, #green:hover, #green:disabled {
-    border-top-left-radius: 100px;
+.toggle-btn {
+    font-family: 'Orbitron';
+    font-weight: 600;
+    color: #fff;
+    padding: 0.4em 2em;
+    -webkit-transition: all 700ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -moz-transition: all 700ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -ms-transition: all 700ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -o-transition: all 700ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    transition: all 700ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    display: block;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#startToggle {
+    border: #153156 3px solid;
+    color: #153156;
+    border-radius: 3px;
+    box-shadow: #153156 0 0px 0px 1px inset;
+    color: #fff;
+}
+
+#startToggle:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: #153156 0 0px 0px 40px inset;
+}
+
+#strictToggle {
+    border: #561515 3px solid;
+    color: #561515;
+    border-radius: 3px;
+    box-shadow: #561515 0 0px 0px 1px inset;
+    color: #fff;
+}
+
+#strictToggle:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: #561515 0 0px 0px 40px inset;
+}
+
+#green,
+#green:hover,
+#green:disabled {
+    border-top-left-radius: 15em;
     border-bottom-right-radius: 0px;
     background: #34ad32;
     opacity: 1;
+    border: 5px solid #298a28;
 }
-#red, #red:hover, #red:disabled {
-    border-top-right-radius: 100px;
+
+#red,
+#red:hover,
+#red:disabled {
+    border-top-right-radius: 15em;
     border-bottom-left-radius: 0px;
     background: #c1473a;
     opacity: 1;
+    border: 5px solid #9a382e;
 }
 
-#yellow, #yellow:hover, #yellow:disabled {
-    border-bottom-left-radius: 100px;
+#yellow,
+#yellow:hover,
+#yellow:disabled {
+    border-bottom-left-radius: 15em;
     border-top-right-radius: 0px;
     background: #dbd229;
     opacity: 1;
+    border: 5px solid #afa820;
 }
 
-#blue, #blue:hover, #blue:disabled {
-    border-bottom-right-radius: 100px;
+#blue,
+#blue:hover,
+#blue:disabled {
+    border-bottom-right-radius: 15em;
     border-top-left-radius: 0px;
     background: #306dc1;
     opacity: 1;
-}
-
-.text{
-    color: #fffbed;
+    border: 5px solid #26579a;
 }
 
 #red:active {
@@ -66,13 +134,158 @@ body{
     background: #102b7f;
 }
 
-.glowing {
-  animation: glowing 1400ms 300ms;
+.glowingRed {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari */
+    transform: scale(1.1);
+    animation: glowingRed 1400ms 300ms;
 }
 
+.glowingGreen {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari */
+    transform: scale(1.1);
+    animation: glowingGreen 1400ms 300ms;
+}
 
-@keyframes glowing {
-  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+.glowingBlue {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari */
+    transform: scale(1.1);
+    animation: glowingBlue 1400ms 300ms;
+}
+
+.glowingYellow {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari */
+    transform: scale(1.1);
+    animation: glowingYellow 1400ms 300ms;
+}
+
+@keyframes glowingRed {
+    0% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000;
+    }
+    50% {
+        background-color: #FF0000;
+        box-shadow: 0 0 40px #FF0000;
+    }
+    100% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000;
+    }
+}
+
+@keyframes glowingGreen {
+    0% {
+        background-color: #41b200;
+        box-shadow: 0 0 3px #41b200;
+    }
+    50% {
+        background-color: #19ff00;
+        box-shadow: 0 0 40px #19ff00;
+    }
+    100% {
+        background-color: #41b200;
+        box-shadow: 0 0 3px #41b200;
+    }
+}
+
+@keyframes glowingBlue {
+    0% {
+        background-color: #0020b2;
+        box-shadow: 0 0 3px #0020b2;
+    }
+    50% {
+        background-color: #0019ff;
+        box-shadow: 0 0 40px #0019ff;
+    }
+    100% {
+        background-color: #0020b2;
+        box-shadow: 0 0 3px #0020b2;
+    }
+}
+
+@keyframes glowingYellow {
+    0% {
+        background-color: #b2a600;
+        box-shadow: 0 0 3px #b2a600;
+    }
+    50% {
+        background-color: #fff600;
+        box-shadow: 0 0 40px #fff600;
+    }
+    100% {
+        background-color: #b2a600;
+        box-shadow: 0 0 3px #b2a600;
+    }
+}
+
+.shake {
+    animation-name: shake;
+    animation-duration: 0.8s;
+    transform-origin: 50% 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-name: shake;
+    -webkit-animation-duration: 0.8s;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(2px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(0px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(2px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(2px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #page-title {
+        font-size: 35px
+    }
+    .simonBtn {
+        margin-left: 50;
+        width: 130px;
+        height: 130px;
+    }
 }
