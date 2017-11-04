@@ -5,6 +5,9 @@ body {
     font-family: 'Orbitron';
     min-height: 100vh
 }
+#page-title{
+    font-family: Monoton;
+}
 
 .strictOn {
     text-shadow: 0 0 10px #fff7f7, 0 0 20px #fff7f7, 0 0 30px #fff7f7, 0 0 20px #fc4f3f, 0 0 40px #fc4f3f, 0 0 30px #fc4f3f, 0 0 70px #fc4f3f, 0 0 80px #fc4f3f, 0 0 100px #fc4f3f;
