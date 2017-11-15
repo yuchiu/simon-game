@@ -33,6 +33,7 @@ body {
     transition-duration: 0.2s, 0.5s, 0.2s;
     transition-property: background, color;
     transition: all .1s ease-in-out;
+    cursor: pointer;
 }
 
 .toggle-btn {
